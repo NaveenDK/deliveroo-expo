@@ -43,7 +43,7 @@ const HomeScreen = () => {
     console.log("HELLO WORLD ");
   }, []);
 
-  console.log(featuredCategories);
+  // console.log(featuredCategories);
 
   return (
     <SafeAreaView className="custom bg-white">
