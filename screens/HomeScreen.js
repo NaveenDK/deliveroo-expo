@@ -80,7 +80,15 @@ const HomeScreen = () => {
         contentContainerStyle={{ paddingBottom: 100 }}
       >
         <Categories />
-        <FeaturedRow
+        {featuredCategories?.map((category) => {
+          <FeaturedRow
+            key={category._id}
+            id={category._id}
+            title={category.name}
+            description={category.short_description}
+          />;
+        })}
+        {/* <FeaturedRow
           id="123"
           title="Featured"
           description="Paid placements from our partners"
@@ -97,7 +105,7 @@ const HomeScreen = () => {
           title="Offers near you!"
           description="Why not support your local restaurant tonight!"
           featuredCategory="Offers"
-        />
+        /> */}
       </ScrollView>
     </SafeAreaView>
   );
